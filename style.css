@@ -2,12 +2,51 @@
 https://www.realtimecolors.com/?colors=fdfcfd-1e0a1f-5b4d5c-012441-287abd&fonts=Roboto%20Slab-Roboto
 */
 
+/* color themes */
+:root {
+	--text: #fdfcfd;
+	--background: #1e0a1f;
+	--primary: #5b4d5c;
+	--secondary: #012441;
+	--accent: #287abd;
+}
+/* TODO: figure out how to let user switch between light and dark (?) */
+
+.theme-text {
+	color: var(--text);
+}
+
+.theme-background {
+	color: var(--background);
+}
+
+.theme-primary {
+	color: var(--primary);
+}
+
+.theme-secondary {
+	color: var(--secondary);
+}
+
+.theme-accent {
+	color: var(--accent);
+}
+
+
 /* font stuff */
 @import url('https://fonts.googleapis.com/css?family=Roboto Slab:700|Roboto:400');
 
 body {
 	font-family: 'Roboto';
 	font-weight: 400;
+	/* default font/background colors? */
+	color: var(--text);
+	background: var(--background);
+}
+
+div {
+	color: var(--text);
+	background: var(--background);
 }
 
 h1, h2, h3, h4, h5 {
@@ -23,30 +62,3 @@ h4 {font-size: 1.777rem; /* 28.48px */}
 h5 {font-size: 1.333rem; /* 21.28px */}
 small {font-size: 0.750rem; /* 12px */}
 
-/* color themes */
-[data-theme="default"] {
-	--text: #fdfcfd;
-	--background: #1e0a1f;
-	--primary: #5b4d5c;
-	--secondary: #012441;
-	--accent: #287abd;
-}
-
-/* TODO: figure out how to let user switch between light and dark (?)
-/*
-:root[data-theme="light"] {
-	--text: #030203;
-	--background: #f4e0f5;
-	--primary: #b1a3b2;
-	--secondary: #bee1fe;
-	--accent: #4294d7;
-}
-
-:root[data-theme="dark"] {
-	--text: #fdfcfd;
-	--background: #1e0a1f;
-	--primary: #5b4d5c;
-	--secondary: #012441;
-	--accent: #287abd;
-}
-*/
