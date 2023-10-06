@@ -24,6 +24,16 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 small {font-size: 0.750rem; /* 12px */}
 
 /* color themes */
+[data-theme="default"] {
+	--text: #fdfcfd;
+	--background: #1e0a1f;
+	--primary: #5b4d5c;
+	--secondary: #012441;
+	--accent: #287abd;
+}
+
+/* TODO: figure out how to let user switch between light and dark (?)
+/*
 :root[data-theme="light"] {
 	--text: #030203;
 	--background: #f4e0f5;
@@ -39,4 +49,4 @@ small {font-size: 0.750rem; /* 12px */}
 	--secondary: #012441;
 	--accent: #287abd;
 }
-
+*/
