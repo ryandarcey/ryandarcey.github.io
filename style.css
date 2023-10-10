@@ -1,45 +1,37 @@
 /*
-https://www.realtimecolors.com/?colors=fdfcfd-1e0a1f-5b4d5c-012441-287abd&fonts=Roboto%20Slab-Roboto
+https://www.realtimecolors.com/?colors=d7e8f4-030e16-750080-112a3c-1098f9&fonts=Poppins-Poppins
 */
 
-/* color themes */
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto Slab:700|Roboto:400');
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Roboto Slab';
+	font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+h1 {font-size: 3.053rem; /* 48.8px */}
+h2 {font-size: 2.442rem; /* 39.04px */}
+h3 {font-size: 1.954rem; /* 31.2px */}
+h4 {font-size: 1.563rem; /* 24.96px */}
+h5 {font-size: 1.250rem; /* 20px */}
+small {font-size: 0.800rem; /* 12.8px */}
+
+/* mostly color stuff */
 :root {
-	--text: #fdfcfd;
-	--background: #1e0a1f;
-	--primary: #5b4d5c;
-	--secondary: #012441;
-	--accent: #287abd;
+	--text: #f1e7f9;
+	--background: #09010e;
+	--primary: #4B0082;
+	--secondary: #240e35;
+	--accent: #9340ce;
 }
 /* TODO: figure out how to let user switch between light and dark (?) */
-
-.theme-text {
-	color: var(--text);
-}
-
-.theme-background {
-	color: var(--background);
-}
-
-.theme-primary {
-	color: var(--primary);
-}
-
-.theme-secondary {
-	color: var(--secondary);
-}
-
-.theme-accent {
-	color: var(--accent);
-}
-
-
-/* font stuff */
-@import url('https://fonts.googleapis.com/css?family=Roboto Slab:700|Roboto:400');
 
 body {
 	font-family: 'Roboto';
 	font-weight: 400;
-	/* default font/background colors? */
+	/* TODO: default font/background colors? idk if i should keep this here */
 	color: var(--text);
 	background: var(--background);
 }
@@ -49,16 +41,36 @@ div {
 	background: var(--background);
 }
 
-h1, h2, h3, h4, h5 {
-	font-family: 'Roboto Slab';
-	font-weight: 700;
+/* add background to top navigation bar */
+.topnav {
+	background-color: red;
+	overflow: hidden;
 }
 
-html {font-size: 100%;} /* 16px */
-h1 {font-size: 4.210rem; /* 67.36px */}
-h2 {font-size: 3.158rem; /* 50.56px */}
-h3 {font-size: 2.369rem; /* 37.92px */}
-h4 {font-size: 1.777rem; /* 28.48px */}
-h5 {font-size: 1.333rem; /* 21.28px */}
-small {font-size: 0.750rem; /* 12px */}
+/* style links in top nav bar */
+.topnav a {
+	float: left;
+	display: block;
+	color: blue;
+	text-align: center;
+	padding: 0.9rem 1.1rem;
+	text-decoration: none;
+}
+
+/* change color of links on hover */
+.topnav a:hover {
+	background-color: green;
+	color: yellow;
+}
+
+/* add an active class to highlight current page */
+.topnav a.active {
+	background-color: aqua;
+	color: magenta;
+}
+
+/* hide link that should open and close the top nav on small screens */
+.topnav .icon {
+	display: none;
+}
 
