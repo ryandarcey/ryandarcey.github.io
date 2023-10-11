@@ -16,7 +16,7 @@ h2 {font-size: 2.442rem; /* 39.04px */}
 h3 {font-size: 1.954rem; /* 31.2px */}
 h4 {font-size: 1.563rem; /* 24.96px */}
 h5 {font-size: 1.250rem; /* 20px */}
-small {font-size: 0.800rem; /* 12.8px */}
+small {font-size: 1.0rem; /* 16px */}
 
 /* mostly color stuff */
 :root {
@@ -34,6 +34,7 @@ body {
 	/* TODO: default font/background colors? idk if i should keep this here */
 	color: var(--text);
 	background: var(--background);
+	padding: 0% 20%;
 }
 
 div {
@@ -42,35 +43,41 @@ div {
 }
 
 /* add background to top navigation bar */
-.topnav {
-	background-color: red;
+nav {
+	background-color: var(--background);
 	overflow: hidden;
+	/* center nav bar */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5% 5%;
 }
 
 /* style links in top nav bar */
-.topnav a {
+nav > a {
 	float: left;
 	display: block;
-	color: blue;
+	background-color: var(--secondary);
+	color: var(--accent);
 	text-align: center;
-	padding: 0.9rem 1.1rem;
+	padding: 1.0rem 1.2rem;
 	text-decoration: none;
 }
 
 /* change color of links on hover */
-.topnav a:hover {
-	background-color: green;
-	color: yellow;
+nav > a:hover {
+	background-color: var(--background);
+	/* color: var(--accent); */
 }
 
 /* add an active class to highlight current page */
-.topnav a.active {
-	background-color: aqua;
-	color: magenta;
+nav > a.active {
+	background-color: var(--primary);
+	color: var(--text);
 }
 
 /* hide link that should open and close the top nav on small screens */
-.topnav .icon {
+nav > .icon {
 	display: none;
 }
 
