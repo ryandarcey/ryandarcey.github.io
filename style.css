@@ -3,41 +3,58 @@ https://www.realtimecolors.com/?colors=d7e8f4-030e16-750080-112a3c-1098f9&fonts=
 */
 
 /* fonts */
-@import url('https://fonts.googleapis.com/css?family=Roboto Slab:700|Roboto:400');
+@import url('https://fonts.googleapis.com/css?family=Roboto Slab:700');
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: bold;
+	font-weight: 700;
+	src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+}
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Roboto Slab';
+	font-family: 'Roboto Slab', serif;
 	font-weight: 700;
 	/* color: var(--accent); */
 	text-decoration: underline;
-	text-decoration-color: var(--accent);
+	text-decoration-color: var(--primary);
+	text-decoration-thickness: 0.2rem;
 }
 
-html {font-size: 100%;} /* 16px */
-h1 {font-size: 3.053rem; /* 48.8px */}
-h2 {font-size: 2.442rem; /* 39.04px */}
-h3 {font-size: 1.954rem; /* 31.2px */}
-h4 {font-size: 1.563rem; /* 24.96px */}
-h5 {font-size: 1.250rem; /* 20px */}
-small {font-size: 1.0rem; /* 16px */}
+html {font-size: 100%;}		/* 16px */
+h1 {font-size: 2.441rem;	/* px */}
+h2 {font-size: 1.953rem;	/* px */}
+h3 {font-size: 1.563rem;	/* px */}
+h4 {font-size: 1.250rem;	/* px */}
+h5 {font-size: 1.000rem;	/* 16px */}
+small {font-size: 1.0rem;	/* 16px */}
 
 :root {
 	--text: #f1e7f9;
-	--background: #09010e;
+	/* --background: #09010e; */
+	--background: #131112;
 	--primary: #4b0082;
 	--secondary: #240e35;
 	--accent: #9340ce;
 	--link: #f2187a;	/* not sure about this color */
+	--cursor-highlight: #d6a55f;
 }
 /* TODO: figure out how to let user switch between light and dark (?) */
 
 ::selection {
-	background: #c79648;
+	background: var(--cursor-highlight);
 	color: var(--background);
 }
 
 body {
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	/* TODO: default font/background colors? idk if i should keep this here */
 	color: var(--text);
@@ -52,6 +69,10 @@ a {
 mark {
 	background-color: var(--primary);
 	color: var(--text);
+}
+
+strong {
+	font-weight: 700;
 }
 
 header {
@@ -116,10 +137,13 @@ nav > .icon {
 	padding: 0.1rem 1.0rem;
 }
 
-/* hr {
-	border-top: 0.5rem solid var(--primary);
-	border-radius: 0.5rem;
-} */
+hr {
+	margin: 0% 5%;
+	margin-top: 2.0rem;
+	margin-bottom: 1.0rem;
+	/* border-top: 0.5rem solid var(--primary);
+	border-radius: 0.5rem; */
+}
 
 .separator-1 .separator-2 {
 	background-color: var(--link);
@@ -130,5 +154,7 @@ footer {
 	border-radius: 0.5rem;
 	background-color: var(--secondary);
 	padding: 0.2rem 1.2rem;
+	margin-top: 2.0rem;
+	margin-bottom: 4.0rem;
 }
 
