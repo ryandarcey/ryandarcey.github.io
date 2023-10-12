@@ -8,6 +8,9 @@ https://www.realtimecolors.com/?colors=d7e8f4-030e16-750080-112a3c-1098f9&fonts=
 h1, h2, h3, h4, h5 {
 	font-family: 'Roboto Slab';
 	font-weight: 700;
+	/* color: var(--accent); */
+	text-decoration: underline;
+	text-decoration-color: var(--accent);
 }
 
 html {font-size: 100%;} /* 16px */
@@ -18,15 +21,20 @@ h4 {font-size: 1.563rem; /* 24.96px */}
 h5 {font-size: 1.250rem; /* 20px */}
 small {font-size: 1.0rem; /* 16px */}
 
-/* mostly color stuff */
 :root {
 	--text: #f1e7f9;
 	--background: #09010e;
-	--primary: #4B0082;
+	--primary: #4b0082;
 	--secondary: #240e35;
 	--accent: #9340ce;
+	--link: #f2187a;	/* not sure about this color */
 }
 /* TODO: figure out how to let user switch between light and dark (?) */
+
+::selection {
+	background: #c79648;
+	color: var(--background);
+}
 
 body {
 	font-family: 'Roboto';
@@ -34,7 +42,23 @@ body {
 	/* TODO: default font/background colors? idk if i should keep this here */
 	color: var(--text);
 	background: var(--background);
-	padding: 0% 20%;
+	padding: 0% 10%;
+}
+
+a {
+	color: var(--link);
+}
+
+mark {
+	background-color: var(--primary);
+	color: var(--text);
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* padding: 1.0rem 1.0rem; */
 }
 
 div {
@@ -44,17 +68,19 @@ div {
 
 /* add background to top navigation bar */
 nav {
-	background-color: var(--background);
+	background-color: var(--secondary);
 	overflow: hidden;
+	border-radius: 0.5rem;
 	/* center nav bar */
-	display: flex;
+	/* display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 5% 5%;
+	padding: 5% 5%; */
 }
 
 /* style links in top nav bar */
 nav > a {
+	/* font-family: 'Roboto Slab'; */
 	float: left;
 	display: block;
 	background-color: var(--secondary);
@@ -79,5 +105,30 @@ nav > a.active {
 /* hide link that should open and close the top nav on small screens */
 nav > .icon {
 	display: none;
+}
+
+.project-category {
+	/* TODO: */
+	border: 0.2rem solid;
+	border-radius: 1.0rem;
+	border-color: var(--secondary);
+	/* background-color: blue; */
+	padding: 0.1rem 1.0rem;
+}
+
+/* hr {
+	border-top: 0.5rem solid var(--primary);
+	border-radius: 0.5rem;
+} */
+
+.separator-1 .separator-2 {
+	background-color: var(--link);
+}
+
+/* TODO: footer stuff */
+footer {
+	border-radius: 0.5rem;
+	background-color: var(--secondary);
+	padding: 0.2rem 1.2rem;
 }
 
