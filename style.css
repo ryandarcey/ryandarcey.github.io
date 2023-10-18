@@ -4,20 +4,8 @@ https://www.realtimecolors.com/?colors=d7e8f4-030e16-750080-112a3c-1098f9&fonts=
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto Slab:700');
-
-@font-face {
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
-	src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-}
-
-@font-face {
-	font-family: 'Roboto';
-	font-style: bold;
-	font-weight: 700;
-	src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-}
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto:wght@700");
 
 h1, h2, h3, h4, h5 {
 	font-family: 'Roboto Slab', serif;
@@ -29,22 +17,32 @@ h1, h2, h3, h4, h5 {
 }
 
 html {font-size: 100%;}		/* 16px */
-h1 {font-size: 2.441rem;	/* px */}
-h2 {font-size: 1.953rem;	/* px */}
-h3 {font-size: 1.563rem;	/* px */}
-h4 {font-size: 1.250rem;	/* px */}
-h5 {font-size: 1.000rem;	/* 16px */}
-small {font-size: 1.0rem;	/* 16px */}
+h1 {font-size: 2.441rem;	/* 39.1px */}
+h2 {font-size: 1.953rem;	/* 31.2px */}
+h3 {font-size: 1.563rem;	/* 25.0px */}
+h4 {font-size: 1.250rem;	/* 20.0px */}
+h5 {font-size: 1.000rem;	/* 16.0px */}
+small {font-size: 1.0rem;	/* 16.0px */}
 
 :root {
-	--text: #f1e7f9;
-	/* --background: #09010e; */
+	/* color palette v1 */
+	/* --text: #f1e7f9;
 	--background: #131112;
 	--primary: #4b0082;
 	--secondary: #240e35;
 	--accent: #9340ce;
-	--link: #f2187a;	/* not sure about this color */
-	--cursor-highlight: #d6a55f;
+	--link: #f2187a;
+	--cursor-highlight: #d6a55f; */
+
+	/* color palette v2 */
+	--text: #eBebeb;
+	--background: #171a1c;
+	--primary: #003566;
+	--secondary: #050529; /*#02182c;*/
+	--secondary-hover: #010106;
+	--accent: #0a81f0;
+	--link: #e9640c; /*#d33646;*/ /* red */
+	--cursor-highlight: #c9bc45;
 }
 /* TODO: figure out how to let user switch between light and dark (?) */
 
@@ -92,11 +90,14 @@ nav {
 	background-color: var(--secondary);
 	overflow: hidden;
 	border-radius: 0.5rem;
+	/* border-style: solid;
+	border-color: var(--secondary);
+	border-width: 0.2rem; */
 	/* center nav bar */
 	/* display: flex;
 	align-items: center;
-	justify-content: center;
-	padding: 5% 5%; */
+	justify-content: center; */
+	/* padding: 0% 1.0rem; */
 }
 
 /* style links in top nav bar */
@@ -113,7 +114,10 @@ nav > a {
 
 /* change color of links on hover */
 nav > a:hover {
-	background-color: var(--background);
+	/* background-color: var(--background); */
+	background-color: var(--secondary-hover);
+	/* color: var(--text); */
+	
 	/* color: var(--accent); */
 }
 
@@ -124,9 +128,9 @@ nav > a.active {
 }
 
 /* hide link that should open and close the top nav on small screens */
-nav > .icon {
+/* nav > .icon {
 	display: none;
-}
+} */
 
 .project-category {
 	/* TODO: */
