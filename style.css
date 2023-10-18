@@ -1,47 +1,85 @@
 /*
-https://www.realtimecolors.com/?colors=fdfcfd-1e0a1f-5b4d5c-012441-287abd&fonts=Roboto%20Slab-Roboto
+https://www.realtimecolors.com/?colors=d7e8f4-030e16-750080-112a3c-1098f9&fonts=Poppins-Poppins
 */
 
-/* color themes */
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto Slab:700');
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: bold;
+	font-weight: 700;
+	src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	/* color: var(--accent); */
+	text-decoration: underline;
+	text-decoration-color: var(--primary);
+	text-decoration-thickness: 0.2rem;
+}
+
+html {font-size: 100%;}		/* 16px */
+h1 {font-size: 2.441rem;	/* px */}
+h2 {font-size: 1.953rem;	/* px */}
+h3 {font-size: 1.563rem;	/* px */}
+h4 {font-size: 1.250rem;	/* px */}
+h5 {font-size: 1.000rem;	/* 16px */}
+small {font-size: 1.0rem;	/* 16px */}
+
 :root {
-	--text: #fdfcfd;
-	--background: #1e0a1f;
-	--primary: #5b4d5c;
-	--secondary: #012441;
-	--accent: #287abd;
+	--text: #f1e7f9;
+	/* --background: #09010e; */
+	--background: #131112;
+	--primary: #4b0082;
+	--secondary: #240e35;
+	--accent: #9340ce;
+	--link: #f2187a;	/* not sure about this color */
+	--cursor-highlight: #d6a55f;
 }
 /* TODO: figure out how to let user switch between light and dark (?) */
 
-.theme-text {
-	color: var(--text);
-}
-
-.theme-background {
+::selection {
+	background: var(--cursor-highlight);
 	color: var(--background);
 }
 
-.theme-primary {
-	color: var(--primary);
-}
-
-.theme-secondary {
-	color: var(--secondary);
-}
-
-.theme-accent {
-	color: var(--accent);
-}
-
-
-/* font stuff */
-@import url('https://fonts.googleapis.com/css?family=Roboto Slab:700|Roboto:400');
-
 body {
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	/* default font/background colors? */
+	/* TODO: default font/background colors? idk if i should keep this here */
 	color: var(--text);
 	background: var(--background);
+	padding: 0% 10%;
+}
+
+a {
+	color: var(--link);
+}
+
+mark {
+	background-color: var(--primary);
+	color: var(--text);
+}
+
+strong {
+	font-weight: 700;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* padding: 1.0rem 1.0rem; */
 }
 
 div {
@@ -49,16 +87,74 @@ div {
 	background: var(--background);
 }
 
-h1, h2, h3, h4, h5 {
-	font-family: 'Roboto Slab';
-	font-weight: 700;
+/* add background to top navigation bar */
+nav {
+	background-color: var(--secondary);
+	overflow: hidden;
+	border-radius: 0.5rem;
+	/* center nav bar */
+	/* display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5% 5%; */
 }
 
-html {font-size: 100%;} /* 16px */
-h1 {font-size: 4.210rem; /* 67.36px */}
-h2 {font-size: 3.158rem; /* 50.56px */}
-h3 {font-size: 2.369rem; /* 37.92px */}
-h4 {font-size: 1.777rem; /* 28.48px */}
-h5 {font-size: 1.333rem; /* 21.28px */}
-small {font-size: 0.750rem; /* 12px */}
+/* style links in top nav bar */
+nav > a {
+	/* font-family: 'Roboto Slab'; */
+	float: left;
+	display: block;
+	background-color: var(--secondary);
+	color: var(--accent);
+	text-align: center;
+	padding: 1.0rem 1.2rem;
+	text-decoration: none;
+}
+
+/* change color of links on hover */
+nav > a:hover {
+	background-color: var(--background);
+	/* color: var(--accent); */
+}
+
+/* add an active class to highlight current page */
+nav > a.active {
+	background-color: var(--primary);
+	color: var(--text);
+}
+
+/* hide link that should open and close the top nav on small screens */
+nav > .icon {
+	display: none;
+}
+
+.project-category {
+	/* TODO: */
+	border: 0.2rem solid;
+	border-radius: 1.0rem;
+	border-color: var(--secondary);
+	/* background-color: blue; */
+	padding: 0.1rem 1.0rem;
+}
+
+hr {
+	margin: 0% 5%;
+	margin-top: 2.0rem;
+	margin-bottom: 1.0rem;
+	/* border-top: 0.5rem solid var(--primary);
+	border-radius: 0.5rem; */
+}
+
+.separator-1 .separator-2 {
+	background-color: var(--link);
+}
+
+/* TODO: footer stuff */
+footer {
+	border-radius: 0.5rem;
+	background-color: var(--secondary);
+	padding: 0.2rem 1.2rem;
+	margin-top: 2.0rem;
+	margin-bottom: 4.0rem;
+}
 
