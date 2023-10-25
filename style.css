@@ -10,7 +10,6 @@ https://www.realtimecolors.com/?colors=d7e8f4-030e16-750080-112a3c-1098f9&fonts=
 h1, h2, h3, h4, h5 {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 700;
-	/* color: var(--accent); */
 	text-decoration: underline;
 	text-decoration-color: var(--primary);
 	text-decoration-thickness: 0.2rem;
@@ -25,39 +24,43 @@ h5 {font-size: 1.000rem;	/* 16.0px */}
 small {font-size: 1.0rem;	/* 16.0px */}
 
 :root {
-	/* color palette v1 */
-	/* --text: #f1e7f9;
-	--background: #131112;
-	--primary: #4b0082;
-	--secondary: #240e35;
-	--accent: #9340ce;
-	--link: #f2187a;
-	--cursor-highlight: #d6a55f; */
-
 	/* color palette v2 */
-	--text: #eBebeb;
+	/* --text: #ebebeb;
 	--background: #171a1c;
 	--primary: #003566;
-	--secondary: #050529; /*#02182c;*/
+	--secondary: #050529;
 	--secondary-hover: #010106;
 	--accent: #0a81f0;
-	--link: #e9640c; /*#d33646;*/ /* red */
-	--cursor-highlight: #c9bc45;
+	--link: #e9640c;
+	--cursor-highlight: #c9bc45; */
+
+	/* color palette v3 */
+	--text: #eBebeb;
+	--background: #1a3044;
+	--primary: #00498d;
+	--secondary: #07121d;
+	--secondary-hover: #0b1c2d;
+	--accent: #2f7ac1;
+	--link: #f47906;
+	--highlight: #8eb663;
+
 }
 /* TODO: figure out how to let user switch between light and dark (?) */
 
 ::selection {
-	background: var(--cursor-highlight);
-	color: var(--background);
+	background: var(--highlight);
+	color: var(--secondary);
 }
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	/* TODO: default font/background colors? idk if i should keep this here */
+	
 	color: var(--text);
 	background: var(--background);
 	padding: 0% 10%;
+
+	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 }
 
 a {
@@ -160,5 +163,9 @@ footer {
 	padding: 0.2rem 1.2rem;
 	margin-top: 2.0rem;
 	margin-bottom: 4.0rem;
+}
+
+summary {
+	cursor: pointer;
 }
 
