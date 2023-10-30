@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, summary {
 
 h1, h2 {
 	text-decoration: underline;
-	text-decoration-color: var(--primary);
+	text-decoration-color: var(--accent);
 	text-decoration-thickness: 0.2rem;
 }
 
@@ -26,10 +26,12 @@ h4, h5 {
 html {font-size: 100%;}		/* 16px */
 h1 {font-size: 2.441rem;	/* 39.1px */}
 h2 {font-size: 1.953rem;	/* 31.2px */}
-h3, summary {font-size: 1.563rem;	/* 25.0px */}
-h4 {font-size: 1.250rem;	/* 20.0px */}
-h5 {font-size: 1.000rem;	/* 16.0px */}
-small {font-size: 1.0rem;	/* 16.0px */}
+h3, summary {font-size: 1.563rem;	/* 25.0px */} /* TODO: make bigger difference with other headings? */
+h4 {font-size: 1.25rem;	/* 20.0px */}
+h5 {font-size: 1.25rem;	/* 16.0px */}
+small, p, li, nav, footer {
+	font-size: 1.25rem;	/* 20.0px */
+} /* TODO: add all other p-sized text */
 
 :root {
 	/* color palette v2 */
@@ -167,7 +169,7 @@ footer {
 	border-radius: 0.5rem;
 	background-color: var(--secondary);
 	padding: 0.2rem 1.2rem;
-	margin-top: 2.0rem;
+	margin-top: 4.0rem;
 	margin-bottom: 4.0rem;
 }
 
@@ -176,11 +178,21 @@ summary {
 }
 
 details {
+	margin-left: 2.5%;
 	margin-bottom: 2.0rem;
 	padding: 0% 1%;
 }
 
-video {
+details[open] summary ~ * {
+	animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+	0%		{opacity: 0; margin-left: 0px}
+	100%	{opacity: 1; margin-left: 5%}
+}
+
+video, .game-image {
 	width: 80%;
 	/* max-width: 960px; */
 	max-width: 70.0rem;
@@ -190,10 +202,17 @@ video {
 details > video,
 details > p,
 details > h4,
-details > ul {
+details > ul,
+details > img {
 	margin-left: 5%;
 	margin-right: 10%;
 	/* padding-left: 5%;
 	padding-right: 10%; */
+}
+
+.me {
+	margin-top: 2rem;
+	max-width: 12rem;
+	border-radius: 100%;
 }
 
