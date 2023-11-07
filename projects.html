@@ -14,22 +14,19 @@
 			<a href="./about.html">About</a>
 		</nav>
 
-		<!-- about me / brief resume-type stuff (education, programming languages, idk) -->
-		<main>			
-			<!-- <h1>Projects</h1> -->
+		<main>
 			<p>
 				Some relevant projects and games I've worked on
-				in the last few years.
+				over the last few years.
 			</p>
-
-			<!-- <hr> -->
 
 			<!-- Games section -->
 			<section class="project-category" id="games">
 				<h2>Games</h2>
 
+				<!-- Robot Rampage -->
 				<section>
-					<details open="true">
+					<details>
 						<summary id="robot-rampage">
 							Robot Rampage
 						</summary>
@@ -55,21 +52,58 @@
 							C#, ShaderLab, HLSL, Python
 						</p>
 						<p>
-							<strong>Links:</strong> <mark>LINKS.....</mark>
+							<strong>Links:</strong> 
+							<a href="https://github.com/ryandarcey/Robot-Rampage">Game Source Code (GitHub)</a>,
+							<!-- <a href="">Game Download (.zip)</a>, -->
+							<a href="">Project Report</a>
 						</p>
 
 						<h4>About</h4>
-						<p><mark>DESCRIPTION.....</mark></p>
+						<p>
+							Robot Rampage is a multi-perspective, retro-style shooter.
+							Playing as Gompei the goat, you must fend off rogue robots roaming
+							the massive tunnel network underneath campus.
+						</p>
+						<p>
+							Robot Rampage was developed as part of research about
+							the effects of latency and jitter on user experience in 
+							cloud game streaming. It was designed with multiple perspectives 
+							and other varying parameters to change aspects of difficulty.
+							The game was used in a user study looking at how combinations
+							of these certain game elements and different amounts of latency and jitter
+							impacted the users experience while playing.
+						</p>
+						<p>
+							Initially, the research and early design was done by our entire team, 
+							and we were helped by our advisor and a PhD student.
+							The design process for Robot Rampage was more intensive and front-loaded than 
+							you might expect of a game of this scope as we had to accomodate
+							many different highly specific constraints for the purpose of the user study.
+						</p>
+						<p>
+							With only two of us then developing the game -- and both of us being programmers --
+							we both worked on most aspects of the game to some degree. Some of the main
+							things I focused on include:
+							<ul>
+								<li>endless procedural map generation</li>
+								<li>switching between first-person, third-person, and overhead camera perspectives</li>
+								<li>reading and loading game settings from JSON files</li>
+								<li>recording and saving relevant gameplay data to files</li>
+								<li>designing and importing rooms from Blender</li>
+								<li>integrating different levels of difficulty</li>
+								<li>integrating pre-made 3D models, textures, and animations</li>
+						</p>
 					</details>
 				</section>
 
+				<!-- Planet of the Ants -->
 				<section>
-					<details open="true">
+					<details>
 						<summary id="planet-of-the-ants">
 							Planet of the Ants
 						</summary>
 						
-						<video controls src=""></video>
+						<iframe src="https://www.youtube.com/embed/01iVT1hUP7M"></iframe>
 						<p>
 							<strong>Released:</strong> May 2022
 						</p>
@@ -92,52 +126,34 @@
 						</p>
 
 						<h4>About</h4>
-						<p><mark>DESCRIPTION.....</mark></p>
+						<p>
+							Planet of the Ants is a real-time, isometric strategy game, 
+							where you control a colony of ants as it gathers resources, makes units, 
+							and expands. Fight against another colony until you kill their Queen,
+							or they kill yours! The game takes place in a hex-tile-based map with
+							each side having access to several types of units and buildings that
+							generate different resources used to recruit more units.
+						</p>
+						<p>
+							The game design was largely a collaborative effort by our five team members.
+							The team consisted of two artists and three programmers (including myself).
+							I was primarily responsible for most of the AI systems such as implementing
+							pathfinding, many of the unit interactions, and opponent behavior, as well
+							as helping to integrate many of the art assets into the game and helping resolve
+							many of the technical issues related to importing and using assets in Unreal 4.
+						</p>
 					</details>
 				</section>
 				
+				<!-- Death Spell -->
 				<section>
-					<details open="true">
-						<summary id="dragonfly-and-dungeonblast">
-							Dragonfly Engine & Dungeonblast
-						</summary>
-						
-						<video controls src=""></video>
-						<p>
-							<strong>Released:</strong> December 2020
-						</p>
-						<p>
-							<strong>Developed:</strong> November - December 2020 <mark>?????</mark>
-						</p>
-						<p>
-							<strong>Tools Used:</strong>
-							<ul>
-								<li>Visual Studio</li>
-								<li><a href="https://dragonfly.wpi.edu/">Dragonfly Engine</a></li>
-								<li>C++ Libraries <mark>?????</mark></li>
-							</ul>
-						</p>
-						<p>
-							<strong>Programming Languages:</strong> C++ 
-						</p>
-						<p>
-							<strong>Links:</strong> <mark>LINKS.....</mark>
-						</p>
-
-						<h4>About</h4>
-						<p><mark>DESCRIPTION.....</mark></p>
-					</details>
-				</section>
-				
-				<section>
-					<details open="true">
+					<details>
 						<summary id="death-spell">
 							Death Spell
 						</summary>
 						
 						<img class="game-image" src="./files/death_spell_1.png" />
 						<img class="game-image" src="./files/death_spell_2.png" />
-						<p><mark>IMAGE/LINK OF RULES ?</mark></p>
 						<p>
 							<strong>Released:</strong> March 2022
 						</p>
@@ -154,24 +170,35 @@
 						<p>
 							<strong>Links:</strong> 
 							<a href="https://www.thegamecrafter.com/games/death-spell1">Death Spell on GameCrafter</a>,
-							<a>Full Game Rules</a>
-							<mark>LINKS.....</mark>
+							<a href="./files/death_spell_rules.pdf">Full Game Rules</a>
 						</p>
 
 						<h4>About</h4>
-						<p><mark>DESCRIPTION.....</mark></p>
+						<p>
+							Death Spell is a fast-paced card game for 2-4 players, where 2 teams of
+							adventurers have been cursed with a volatile spell and must compete to
+							stay alive. Players pass around the death spell as it counts down 
+							every turn. Each player has a unique ability as well as cards they can
+							play from a shared deck. You win if your team avoids death while the 
+							opposing team succumbs to the spell.
+						</p>
+						<p>
+							Our team of four members collaborated on all the elements of game design 
+							and iteration via extensive playtesting. For the actual production I 
+							helped to create and refine the full rules and I was primarily
+							responsible for visually designing and making many of the final cards 
+							in Photoshop.
+						</p>
 					</details>
 				</section>
 		
 			</section>
-
-			<!-- <div class="separator-1"></div>
-			<hr> -->
 			
 			<!-- Other software section -->
 			<section class="project-category" id="software">
-				<h2>Other (Software, other things, idk)</h2>
+				<h2>Other Projects</h2>
 
+				<!-- BW App -->
 				<section>
 					<details open="true">
 						<summary id="bw-app">
@@ -209,21 +236,24 @@
 					</details>
 				</section>
 				
+				<!-- Music Genre Classification -->
 				<section>
-					<details open="true">
+					<details>
 						<summary id="">
-							Music Genre Classification Model
+							Music Genre Classification Models
 						</summary>
 						
 						<video controls src=""></video>
 						<p>
-							<strong>Developed:</strong> March - May 2023 (?????)
+							<strong>Developed:</strong> March - May 2023
 						</p>
 						<p>
 							<strong>Tools Used:</strong>
 							<ul>
 								<li>Visual Studio Code</li>
-								<li>PYTHON LIBRARIES </li>
+								<li>Various Python libraries, including:</li>
+								<li><code>spotipy, soundfile, scipy, librosa</code> (for collecting data + features)</li>
+								<li><code>pandas, sklearn, xgboost, tensorflow</code> (for making models)</li>
 							</ul>
 						</p>
 						<p>
@@ -231,15 +261,40 @@
 							Python
 						</p>
 						<p>
-							<strong>Links:</strong> <mark>LINKS.....</mark>
+							<strong>Links:</strong>
+							<a href="https://github.com/abigailalbuquerque/Music-Genre-Classification">Source Code (GitHub)</a>,
+							<a href="./files/music_classification_report.pdf">Final Report</a> <mark>(?)</mark>
 						</p>
 
 						<h4>About</h4>
-						<p><mark>DESCRIPTION.....</mark></p>
+						<p>
+							This project aimed to create a machine learning model that could accurately
+							classify 30-second clips of songs into one of 10 genres. We used two different
+							methods of extracting features from the song data.
+							The first was numerical features (38 commonly cited numerical aspects
+							of music such as zero-crossing rate, spectral centroid,
+							and mel-frequency cepstral coefficients), while the second was
+							creating a Mel-Spectrogram from each song clip.
+						</p>
+						<p>
+							Using ~1600 30-second song clips from Spotify as our data set,
+							we made a number of models (including KNN, Random Forest, and XGB)
+							on the numerical data, with the XGB model achieving 90.7% accuracy.
+							Then, with the Mel-Spectrogram images, we trained a CNN as an image
+							classifier, essentially categorizing the songs by the visual characteristics
+							that appeared in the Mel-Spectrograms, which achieved between
+							91% and 95% cross-validation accuracy.
+						</p>
+						<p>
+							After researching approaches and good candidates for features, I was primarily
+							responsible for both turning the song clips into usable Mel-Spectrograms,
+							as well as creating, training, and adjusting the CNN used to
+							classify those spectrograms.
+						</p>
 					</details>
 				</section>
 				
-				<section>
+				<!-- <section>
 					<details open="true">
 						<summary>
 							<mark>(Webware project?)</mark>
@@ -269,9 +324,9 @@
 						<h4>About</h4>
 						<p><mark>DESCRIPTION.....</mark></p>
 					</details>
-				</section>
+				</section> -->
 				
-				<section>
+				<!-- <section>
 					<details open="true">
 						<summary>
 							<mark>(Graphics project?)</mark>
@@ -301,7 +356,7 @@
 						<h4>About</h4>
 						<p><mark>DESCRIPTION.....</mark></p>
 					</details>
-				</section>
+				</section> -->
 				
 			</section>
 			<!--  -->

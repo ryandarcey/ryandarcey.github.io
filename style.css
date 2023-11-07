@@ -24,10 +24,10 @@ h4, h5 {
 }
 
 html {font-size: 100%;}		/* 16px */
-h1 {font-size: 2.441rem;	/* 39.1px */}
-h2 {font-size: 1.953rem;	/* 31.2px */}
-h3, summary {font-size: 1.563rem;	/* 25.0px */} /* TODO: make bigger difference with other headings? */
-h4 {font-size: 1.25rem;	/* 20.0px */}
+h1 {font-size: 2.93rem;	/* px */}
+h2 {font-size: 2.344rem;	/* px */}
+h3, summary {font-size: 1.875rem;	/* px */} /* TODO: make bigger difference with other headings? */
+h4 {font-size: 1.5rem;	/* 20.0px */}
 h5 {font-size: 1.25rem;	/* 16.0px */}
 small, p, li, nav, footer {
 	font-size: 1.25rem;	/* 20.0px */
@@ -53,6 +53,9 @@ small, p, li, nav, footer {
 	--accent: #2f7ac1;
 	--link: #f47906;
 	--highlight: #8eb663;
+
+	/* other */
+	--details-contents-left-margin: 3rem;
 
 }
 /* TODO: figure out how to let user switch between light and dark (?) */
@@ -154,7 +157,7 @@ nav > a.active {
 
 hr {
 	margin: 0% 5%;
-	margin-top: 1.0rem;
+	margin-top: 2.0rem;
 	margin-bottom: 1.0rem;
 	/* border-top: 0.5rem solid var(--primary);
 	border-radius: 0.5rem; */
@@ -189,22 +192,27 @@ details[open] summary ~ * {
 
 @keyframes sweep {
 	0%		{opacity: 0; margin-left: 0px}
-	100%	{opacity: 1; margin-left: 5%}
+	100%	{opacity: 1; margin-left: var(--details-contents-left-margin)}
 }
 
-video, .game-image {
+video, iframe, .game-image {
 	width: 80%;
 	/* max-width: 960px; */
 	max-width: 70.0rem;
 	margin-top: 1.0rem;
 }
 
+iframe {
+	aspect-ratio: 16 / 9;
+}
+
 details > video,
+details > iframe,
 details > p,
 details > h4,
 details > ul,
 details > img {
-	margin-left: 5%;
+	margin-left: var(--details-contents-left-margin);
 	margin-right: 10%;
 	/* padding-left: 5%;
 	padding-right: 10%; */
@@ -214,5 +222,16 @@ details > img {
 	margin-top: 2rem;
 	max-width: 16rem;
 	border-radius: 100%;
+}
+
+.center {
+	text-align: center;
+}
+
+/* TODO: this isn't centering the image */
+image.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
