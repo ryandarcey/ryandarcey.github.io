@@ -26,7 +26,7 @@ h4, h5 {
 html {font-size: 100%;}		/* 16px */
 h1 {font-size: 2.93rem;	/* px */}
 h2 {font-size: 2.344rem;	/* px */}
-h3, summary {font-size: 1.875rem;	/* px */} /* TODO: make bigger difference with other headings? */
+h3, summary {font-size: 1.875rem;	/* px */}
 h4 {font-size: 1.5rem;	/* 20.0px */}
 h5 {font-size: 1.25rem;	/* 16.0px */}
 small, p, li, nav, footer {
@@ -232,7 +232,6 @@ details > img {
 	text-align: center;
 }
 
-/* TODO: this isn't centering the image */
 img.center {
 	display: block;
 	margin-left: auto;
