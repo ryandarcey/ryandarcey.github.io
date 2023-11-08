@@ -31,20 +31,10 @@ h4 {font-size: 1.5rem;	/* 20.0px */}
 h5 {font-size: 1.25rem;	/* 16.0px */}
 small, p, li, nav, footer {
 	font-size: 1.25rem;	/* 20.0px */
-} /* TODO: add all other p-sized text */
+}
 
 :root {
-	/* color palette v2 */
-	/* --text: #ebebeb;
-	--background: #171a1c;
-	--primary: #003566;
-	--secondary: #050529;
-	--secondary-hover: #010106;
-	--accent: #0a81f0;
-	--link: #e9640c;
-	--cursor-highlight: #c9bc45; */
-
-	/* color palette v3 */
+	/* color palette */
 	--text: #eBebeb;
 	--background: #1a3044;
 	--primary: #00498d;
@@ -76,6 +66,22 @@ body {
 	/* box-shadow: 0 3px 5px rgba(0,0,0,0.3); */
 }
 
+main {
+	margin-left: 1%;
+}
+
+main.index {
+	margin-left: 0%;
+}
+
+p {
+	max-width: 75%;
+}
+
+p.full-width {
+	max-width: 100%;
+}
+
 a {
 	color: var(--link);
 }
@@ -87,13 +93,6 @@ mark {
 
 strong {
 	font-weight: 700;
-}
-
-header {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* padding: 1.0rem 1.0rem; */
 }
 
 div {
@@ -109,11 +108,15 @@ nav {
 	/* border-style: solid;
 	border-color: var(--secondary);
 	border-width: 0.2rem; */
+
 	/* center nav bar */
-	/* display: flex;
+	display: flex;
 	align-items: center;
-	justify-content: center; */
+	justify-content: center;
 	/* padding: 0% 1.0rem; */
+
+	/* max-width: fit-content; */
+	
 }
 
 /* style links in top nav bar */
@@ -167,13 +170,14 @@ hr {
 	background-color: var(--link);
 }
 
-/* TODO: footer stuff */
 footer {
 	border-radius: 0.5rem;
 	background-color: var(--secondary);
 	padding: 0.2rem 1.2rem;
 	margin-top: 4.0rem;
 	margin-bottom: 4.0rem;
+
+	text-align: center;
 }
 
 summary {
@@ -229,9 +233,29 @@ details > img {
 }
 
 /* TODO: this isn't centering the image */
-image.center {
+img.center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.home {
+	display: block;
+	justify-content: center;
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center; */
+}
+
+nav.index, footer.index {
+	max-width: 50%;
+	min-width: fit-content;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+figcaption {
+	font-size: 1.0rem;
+	margin-left: 2.0rem;
 }
 

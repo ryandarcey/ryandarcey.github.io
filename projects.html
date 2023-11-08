@@ -7,6 +7,10 @@
 	</head>
 
 	<body>
+		<header>
+			<h3 class="center">- Ryan Darcey -</h3>
+		</header>
+
 		<!-- top nav bar -->
 		<nav>
 			<a href="./index.html">Home</a>
@@ -55,7 +59,7 @@
 							<strong>Links:</strong> 
 							<a href="https://github.com/ryandarcey/Robot-Rampage">Game Source Code (GitHub)</a>,
 							<!-- <a href="">Game Download (.zip)</a>, -->
-							<a href="">Project Report</a>
+							<a href="https://digital.wpi.edu/concern/student_works/c534fs31k">Published Report</a>
 						</p>
 
 						<h4>About</h4>
@@ -74,24 +78,22 @@
 							impacted the users experience while playing.
 						</p>
 						<p>
-							Initially, the research and early design was done by our entire team, 
-							and we were helped by our advisor and a PhD student.
 							The design process for Robot Rampage was more intensive and front-loaded than 
-							you might expect of a game of this scope as we had to accomodate
-							many different highly specific constraints for the purpose of the user study.
+							you might expect of a game of this scope. This is because we had to accomodate
+							many different highly specific constraints for the purpose of the user study,
+							making sure it would be effective for gathering relevant data.
 						</p>
 						<p>
-							With only two of us then developing the game -- and both of us being programmers --
-							we both worked on most aspects of the game to some degree. Some of the main
-							things I focused on include:
+							After research and design, some of the main things
+							I was responsible for during development include:
 							<ul>
-								<li>endless procedural map generation</li>
-								<li>switching between first-person, third-person, and overhead camera perspectives</li>
-								<li>reading and loading game settings from JSON files</li>
-								<li>recording and saving relevant gameplay data to files</li>
-								<li>designing and importing rooms from Blender</li>
-								<li>integrating different levels of difficulty</li>
-								<li>integrating pre-made 3D models, textures, and animations</li>
+								<li>Endless procedural map generation</li>
+								<li>Switching between first-person, third-person, and overhead camera perspectives</li>
+								<li>Reading and loading game settings from JSON files</li>
+								<li>Recording and saving relevant gameplay data to files</li>
+								<li>Designing and importing rooms from Blender</li>
+								<li>Integrating different levels of difficulty</li>
+								<li>Integrating pre-made 3D models, textures, and animations</li>
 						</p>
 					</details>
 				</section>
@@ -135,11 +137,11 @@
 							generate different resources used to recruit more units.
 						</p>
 						<p>
-							The game design was largely a collaborative effort by our five team members.
-							The team consisted of two artists and three programmers (including myself).
-							I was primarily responsible for most of the AI systems such as implementing
-							pathfinding, many of the unit interactions, and opponent behavior, as well
-							as helping to integrate many of the art assets into the game and helping resolve
+							The game design was largely a collaborative effort by our five team members
+							(two artists and three programmers).
+							I was responsible for most of the AI systems such as implementing
+							pathfinding, many of the unit interactions, and opponent behavior.
+							I also integrated many of the art assets into the game and helped resolve
 							many of the technical issues related to importing and using assets in Unreal 4.
 						</p>
 					</details>
@@ -184,10 +186,9 @@
 						</p>
 						<p>
 							Our team of four members collaborated on all the elements of game design 
-							and iteration via extensive playtesting. For the actual production I 
-							helped to create and refine the full rules and I was primarily
-							responsible for visually designing and making many of the final cards 
-							in Photoshop.
+							and iteration via extensive playtesting. 
+							For the actual production, I helped to create and refine the full rules,
+							and I visually designed and made many of the final cards using Photoshop.
 						</p>
 					</details>
 				</section>
@@ -200,12 +201,14 @@
 
 				<!-- BW App -->
 				<section>
-					<details open="true">
+					<details>
 						<summary id="bw-app">
 							Brigham & Women's Hospital App
 						</summary>
 						
-						<video controls src=""></video>
+						<img class="game-image" src="./files/bw_app_1.png" />
+						<img class="game-image" src="./files/bw_app_2.jpg" />
+						<img class="game-image" src="./files/bw_app_3.png" />
 						<p>
 							<strong>Released:</strong> March 2021
 						</p>
@@ -215,24 +218,79 @@
 						<p>
 							<strong>Tools Used:</strong>
 							<ul>
-								<li>Java (version?)</li>
-								<li>JavaFX</li>
-								<li>JavaFX editor (???)</li>
-								<li>HTMX (???)</li>
-								<li>Gradle</li>
 								<li>IntelliJ IDEA</li>
+								<li>JavaFX</li>
+								<li>Scene Builder (for JavaFX)</li>
+								<li>Gradle</li>
+								<li>Trello</li>
 							</ul>
 						</p>
 						<p>
 							<strong>Programming Languages:</strong> 
-							Java, HTMX (???)
+							Java, FXML
 						</p>
 						<p>
-							<strong>Links:</strong> <mark>LINKS.....</mark>
+							<strong>Links:</strong>
+							<a href="https://github.com/CS3733-D21-Team-O/BW-App">Source Code (GitHub)</a>,
+							<a href="files/bw_app_user_manual.pdf">User Manual</a>
 						</p>
 
 						<h4>About</h4>
-						<p><mark>DESCRIPTION.....</mark></p>
+						<p>
+							Over the course of 7 weeks, I worked in a team with nine other students 
+							using agile methodology throughout 4 major sprints. We also held daily
+							scrums and created and assigned user stories at the beginning of each sprint.
+						</p>
+						<p>
+							The application was intended primarily to be used on kiosks at the 
+							Brigham and Women's Faulkner Hospital and contains three major components
+							which were influenced by surveys and interviews of potential users:
+							<ul>
+								<li>
+									A pathfinding system that shows users the fastest route to
+									their chosen destination.
+								</li>
+								<li>
+									A map editor allowing hospital admins to add, edit, or delete
+									locations from the existing map.
+								</li>
+								<li>
+									A request service that allows employees to request 
+									hospital services when and where necessary.
+								</li>
+							</ul>
+						</p>
+						<p>
+							The app also contains several more features and extensions of the 
+							above core features. These include a sharing feature, allowing 
+							users to text or email the route to themselves or scan a QR code,
+							and a protype thermometer integration to check if a patient has a 
+							fever before entering the hostpital.
+						</p>
+						<p>
+							Some key components I was responsible for include:
+							<ul>
+								<li>
+									Gathering user studies and creating user stories at the beginning
+									of each sprint.
+								</li>
+								<li>Creating and integrating several pathfinding 
+									algorithms into the route finder.
+								</li>
+								<li>Implementing most features of the map editor (displaying nodes, adding, editing, 
+									and deleting nodes and edges, etc.).
+								</li>
+								<li>Implementing most features of the route finder 
+									(entering the user's location and destination,
+									displaying the route on the map,
+									zooming and panning of the map,
+									displaying different floors, etc.).
+								</li>
+								<li>The addition of a 'dino game' for the user to play
+									while waiting for approval to enter the hospital.
+								</li>
+							</ul>
+						</p>
 					</details>
 				</section>
 				
@@ -243,7 +301,15 @@
 							Music Genre Classification Models
 						</summary>
 						
-						<video controls src=""></video>
+						<figure>
+							<img class="game-image" src="./files/music_classification_knn.png" />
+							<figcaption>Confusion matrix for KNN, with K=12 on numerical features</figcaption>
+						</figure>
+						<figure>
+							<img class="game-image" src="./files/music_classification_spectrograms.png" />
+							<figcaption>Two example Mel-Spectrograms</figcaption>
+						</figure>
+						
 						<p>
 							<strong>Developed:</strong> March - May 2023
 						</p>
@@ -252,8 +318,8 @@
 							<ul>
 								<li>Visual Studio Code</li>
 								<li>Various Python libraries, including:</li>
-								<li><code>spotipy, soundfile, scipy, librosa</code> (for collecting data + features)</li>
-								<li><code>pandas, sklearn, xgboost, tensorflow</code> (for making models)</li>
+								<li><code>spotipy, soundfile, scipy, librosa </code> (for collecting data + features)</li>
+								<li><code>pandas, sklearn, xgboost, tensorflow </code> (for making models)</li>
 							</ul>
 						</p>
 						<p>
@@ -263,7 +329,7 @@
 						<p>
 							<strong>Links:</strong>
 							<a href="https://github.com/abigailalbuquerque/Music-Genre-Classification">Source Code (GitHub)</a>,
-							<a href="./files/music_classification_report.pdf">Final Report</a> <mark>(?)</mark>
+							<a href="./files/music_classification_report.pdf">Final Report</a>
 						</p>
 
 						<h4>About</h4>
@@ -286,9 +352,9 @@
 							91% and 95% cross-validation accuracy.
 						</p>
 						<p>
-							After researching approaches and good candidates for features, I was primarily
-							responsible for both turning the song clips into usable Mel-Spectrograms,
-							as well as creating, training, and adjusting the CNN used to
+							In addition to researching approaches and good candidates for features, 
+							I was primarily responsible for both turning the song clips into usable
+							Mel-Spectrograms, as well as creating, training, and adjusting the CNN used to
 							classify those spectrograms.
 						</p>
 					</details>
@@ -368,7 +434,7 @@
 		<!-- contact info at the bottom -->
 		<!-- TODO: have this inserted by JS? -->
 		<footer>
-			<p>
+			<p class="full-width">
 				<a href="https://www.linkedin.com/in/ryan-darcey/">LinkedIn</a> | 
 				<a href="https://github.com/ryandarcey">GitHub</a> | 
 				<a href="https://arc-7271.itch.io/">Itch</a> | 
